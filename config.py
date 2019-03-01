@@ -3,6 +3,7 @@ import os
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:mba123456@localhost/blog'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     #  email configurations
@@ -14,15 +15,34 @@ class Config:
 
 
 class ProdConfig(Config):
+    '''
+    Production  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ozzy:ozzie21@localhost/blog_test'
+    '''
+    Testing configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:mba123456@localhost/blog'
 
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ozzy:ozzie21@localhost/blog'
+    '''
+    Development  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:mba123456@localhost/blog'
     DEBUG = True
 
 

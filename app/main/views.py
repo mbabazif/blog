@@ -12,7 +12,7 @@ def home():
     """
     Renders the home page
     """
-    title = "Welcome | Ozzy Blog"
+    title = "Welcome | Florence blog"
 
     return render_template('home.html', title=title)
 

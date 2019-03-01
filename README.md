@@ -1,10 +1,10 @@
-## One Minute Pitch
+## personal blog
 
 ### By Florence Mbabazi
 
 ##Description
 
-This is one minute pitch application that allows users to use that one minute wisely. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
+This is a personal blogging website that allows create and share your opinions and other users can read and comment on them
 
 ### Prerequisite
 
@@ -28,7 +28,7 @@ pyperclip
 
 In your terminal:
 
-\$ git clone https://github.com/mbabazif/pitches.git
+\$ git clone https://github.com/mbabazif/blog.git
 
 To run the application, in your terminal:
 
