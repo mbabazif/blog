@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block navbar %}
-<div class="navbar navbar-inverse fixed-top" role="navigation" style="background-color:#1a0000; border:black; border-radius:1px;">
+<div class="navbar navbar-inverse fixed-top" role="navigation" style="background-color:#1a0000;">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -14,10 +14,10 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
-        <li><a href="/blog/new-blog/"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Start a
+        <li><a href="/blog/new-blog/"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Enter your
             blogpost</a></li>
         <li><a href="/subscribe/"></span> Subscribe</a></li>
-        <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="user" style="color:whitesmoke; font-weight:bolder;"><span
+        <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="user" style="color:rgba(59, 93, 241, 0.89); font-weight:bolder;"><span
               class="glyphicon glyphicon-user"></span> &nbsp;{{current_user.username}}</a></li>
         <li><a href="{{url_for('auth.logout')}}" class="logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Log
             out</a></li>

@@ -6,30 +6,35 @@
 <body>
   <div class="container-fluid">
     <div class="container">
+      <div class="jumbotron">
+        <p>{{ quote.quote }}</p>
+        <h2>{{ quote.author }}</h2>
+        <h3>{{ quote.id }}</h3>
+      </div>
       <div class="jumbotron" style="margin-top:20%">
-      <div class="row">
-        <div id="this">
-          <h1 class="title" style="color: royalblue; text-align: center">
-            Welcome To My Personal Blog
-          </h1>
-          <!-- <center> -->
-            {% if current_user.is_authenticated%}
-            <a
-              id="start"
-              class="btn btn-danger btn-lg"
-              href="{{ url_for('main.index') }}"
-              >View blogs</a
-            >
-            {% else %}
-            <a
-              id="start"
-              class="btn btn-danger btn-lg"
-              href="{{ url_for('auth.register') }}"
-              >Enter Information</a
-            >
-            {% endif %}
-          </center>
-        </div>
+        <div class="row">
+          <div id="this">
+            <h1 class="title" style="color: royalblue; text-align: center">
+              Welcome To My Personal Blog
+            </h1>
+            <center>
+              {% if current_user.is_authenticated%}
+              <a
+                id="start"
+                class="btn btn-danger btn-lg"
+                href="{{ url_for('main.index') }}"
+                >View blogs</a
+              >
+              {% else %}
+              <a
+                id="start"
+                class="btn btn-danger btn-lg"
+                href="{{ url_for('auth.register') }}"
+                >View-New-Blogs</a
+              >
+              {% endif %}
+            </center>
+          </div>
         </div>
       </div>
     </div>

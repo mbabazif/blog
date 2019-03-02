@@ -5,6 +5,7 @@ from .. import db, photos
 from ..models import User, Blog, Comments, Subscription
 from .forms import PitchForm, CommentForm, UpdateProfile, SubscribeForm
 from app.email import mail_message
+from ..request import get_quote
 
 
 @main.route('/')
@@ -13,8 +14,8 @@ def home():
     Renders the home page
     """
     title = "Welcome | Florence blog"
-
-    return render_template('home.html', title=title)
+    quote = get_quote()
+    return render_template('home.html', title=title, quote=quote)
 
 
 @main.route('/index')
