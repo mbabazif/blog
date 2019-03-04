@@ -12,7 +12,7 @@ class BlogTest(unittest.TestCase):
         Set up method that will run before every Test
         '''
         self.new_blog = Blog(1, 'Python Must Be Crazy',
-                             'A thrilling new Python Series', 'Ozzy', 2018)
+                             'A thrilling new Python Series', 'wecode', 2018)
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_blog, Blog))

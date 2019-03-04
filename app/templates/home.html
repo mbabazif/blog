@@ -1,21 +1,16 @@
 {% extends 'base.html'%} {% block styles%}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}" />
-<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet" />
+<!-- <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet" /> -->
 {% endblock %} {% block content %}
 <body>
   <div class="container-fluid">
     <div class="container">
-      <div class="jumbotron">
-        <p>{{ quote.quote }}</p>
-        <h2>{{ quote.author }}</h2>
-        <h3>{{ quote.id }}</h3>
-      </div>
-      <div class="jumbotron" style="margin-top:20%">
+      <div class="jumbotron" style="margin-top:10%; background-color: teal">
         <div class="row">
           <div id="this">
-            <h1 class="title" style="color: royalblue; text-align: center">
-              Welcome To My Personal Blog
+            <h1 class="title" style="color: black; text-align: center">
+              Welcome To Personal Blog
             </h1>
             <center>
               {% if current_user.is_authenticated%}
@@ -30,12 +25,23 @@
                 id="start"
                 class="btn btn-danger btn-lg"
                 href="{{ url_for('auth.register') }}"
-                >View-New-Blogs</a
+                >Create Account</a
               >
               {% endif %}
             </center>
           </div>
         </div>
+      </div>
+      <div
+        class="jumbotron"
+        style="margin-top: 10%; color: black; background-color: teal;"
+      >
+        <h1 style="text-align:center;">Quotes</h1>
+
+        <p>{{ quote.quote }}</p>
+        <h2>{{ quote.author }}</h2>
+        <h3>{{ quote.id }}</h3>
+        <!-- </div> -->
       </div>
     </div>
   </div>
