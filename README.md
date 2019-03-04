@@ -30,6 +30,8 @@ In your terminal:
 
 \$ git clone https://github.com/mbabazif/blog.git
 
+View this application using this link:https://floblog.herokuapp.com/
+
 To run the application, in your terminal:
 
 \$ python3.6 run.py
